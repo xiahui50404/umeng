@@ -1,0 +1,16 @@
+<html>
+<head>
+    <title>
+        {% if page_title %}
+            {{ page_title }}
+        {% endif %}
+    </title>
+</head>
+
+<body>
+{% block body %}
+    {% for key in dau_info %}
+        <br />
+        {{ key }}: {{ dau_info[key] }}
+    {% endfor %}
+{% endblock %}
